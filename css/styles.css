@@ -873,6 +873,7 @@ textarea:focus {
 .close-btn:hover,
 .close-btn:focus {
   color: var(--accent-color);
+  outline: none;
 }
 .close-btn .icon {
   fill: currentColor;
