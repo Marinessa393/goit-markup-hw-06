@@ -40,7 +40,7 @@
           </li>
           <li>
             <a href="tel:+380961111111" class="contacts-link">
-              <svg class="contacts-icon" width="10" height="15">
+              <svg class="contacts-icon" width="10" height="56">
                 <use href="./images/svg/symbol-defs.svg#smartphone"></use>
               </svg>
               <p>+38 096 111 11 11</p>
@@ -55,7 +55,7 @@
         <div class="container">
           <div>
             <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="main-button hero-btn">Заказать услугу</button>
+          <button type="button" class="main-button hero-btn" data-modal-open>Заказать услугу</button>
           </div>
         </div>
       </section>
@@ -130,7 +130,7 @@
           <ul class="team">
             <li class="team-card">
               <img src="./images/hero1.jpg" alt="" width="270">
-              <h3 class="team-title">Николай Кучеренко</h3>
+              <h3 class="team-title">Игорь Демьяненко</h3>
               <p>Product Designer</p>
               <ul class="team-socials">
                 <li class="item">
@@ -165,7 +165,7 @@
             </li>
             <li class="team-card">
               <img src="./images/hero2.jpg" alt="" width="270">
-              <h3 class="team-title">Ольга Иванова</h3>
+              <h3 class="team-title">Ольга Репина</h3>
               <p>Frontend Developer</p>
               <ul class="team-socials">
                 <li class="item">
@@ -200,7 +200,7 @@
             </li>
             <li class="team-card">
               <img src="./images/hero3.jpg" alt="" width="270">
-              <h3 class="team-title">Андрей Шевченко</h3>
+              <h3 class="team-title">Николай Тарасов</h3>
               <p>Marketing</p>
               <ul class="team-socials">
                 <li class="item">
@@ -235,7 +235,7 @@
             </li>
             <li class="team-card">
               <img src="./images/hero4.jpg" alt="" width="270">
-              <h3 class="team-title">Иван Николаев</h3>
+              <h3 class="team-title">Михаил Ермаков</h3>
               <p>UI Designer</p>
               <ul class="team-socials">
                 <li class="item">
@@ -378,18 +378,70 @@
   <!-- форма подписки на рассылку -->
         <div class="footer-mail">
           <b>Подпишитесь на рассылку</b>
-          <div class="mail">
-            <!-- временная вставка, позже на ее месте будет форма -->
-            <p class="mail-window">E-mail</p>
-            <button type="button" class="main-button">
+          <form action="" class="form">
+            <input type="email" name="email" class="footer-input" placeholder="E-mail"/> 
+            
+            <button type="submit" class="main-button submit-btn">
               Подписаться
               <svg class="button-icon">
                 <use href="./images/svg/symbol-defs.svg#icon-send"></use>
               </svg>
             </button>
-          </div>
+          </form>
+          
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <form class="modal" autocomplete="on">
+        <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+          <label class="form-field">
+            <span class="label">Имя</span>
+            <input type="name" name="name"class="form-input" />
+            <span class="modal-icon">
+              <svg class="icon">
+                <use href="./images/svg/symbol-defs.svg#modal-name"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="form-field">
+            <span class="label">Телефон</span>
+            <input type="tel" name="tel" class="form-input" />
+            <span class="modal-icon">
+              <svg class="icon">
+                <use href="./images/svg/symbol-defs.svg#modal-tel"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="form-field">
+            <span class="label">Почта</span>
+            <input type="email" name="mail" id="email" class="form-input" />
+            <span class="modal-icon">
+              <svg class="icon">
+                <use href="./images/svg/symbol-defs.svg#modal-mail"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="form-field comment-field">
+            <span class="label">Комментарий</span>
+            <textarea name="comment" placeholder="введите текст..."></textarea>
+          </label>
+
+        <label class="policy">
+          <input type="checkbox" name="agreement" class="checkbox"/>
+          <span class="agreement">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></span>
+        </label>
+    
+        <button type="submit" class="main-button submit-btn">Отправить</button>
+        <button class="close-btn" data-modal-close>
+          <svg class="icon" width="18" height="18">
+            <use href="./images/svg/symbol-defs.svg#close"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <script src="./modal.js"></script>
 </body>
 </html>
